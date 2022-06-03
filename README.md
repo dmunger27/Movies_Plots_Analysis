@@ -1,4 +1,4 @@
-ads 509 final project - team 13
+Movies Reviews and Ratings Analysis
 ==============================
 
 A short description of the project.
