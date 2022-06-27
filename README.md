@@ -3,7 +3,7 @@ Movies Reviews and Ratings Analysis
 
 # Final Project Objective
 
-Building a machine learning based application that can classify the genre of any movie based on a summary/synopsis of a movie. The goal is to build a highly-accurate classification model that will be able to classify a plot summary into five distinct categories: animation, action, comedy, documentary, and drama. Lastly, build a topic model to fully understand the structure of a plot summary for more insights for each word.
+Build a machine learning based application that can classify the genre of any movie based on a summary/synopsis of a movie. The goal is to build a highly-accurate classification model that will be able to classify a plot summary into five distinct categories: animation, action, comedy, documentary, and drama. Lastly, build a topic model to fully understand the structure of a plot summary for more insights for each word.
 
 # Data set Description
 
