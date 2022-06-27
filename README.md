@@ -1,7 +1,13 @@
 Movies Reviews and Ratings Analysis
 ==============================
 
-A short description of the project.
+# Final Project Objective
+
+Building a machine learning based application that can classify the genre of any movie based on a summary/synopsis of a movie. The goal is to build a highly-accurate classification model that will be able to classify a plot summary into five distinct categories: animation, action, comedy, documentary, and drama. Lastly, build a topic model to fully understand the structure of a plot summary for more insights for each word.
+
+# Data set Description
+
+Data source comes from pulling the data from OMDB's API. The estimate size of the data set may be close to 5,000 movie descriptions or less. The total number of variables is 15 for now from the raw data set. This includes the movie title, genre, IMDB rating, and the movie plot summary. However, upon data preparation and cleaning, the number of dimensionality may increase exponentially due to TF-IDF transformations.
 
 Project Organization
 ------------
