@@ -1,0 +1,139 @@
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  margin: 1;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* Style the top navigation bar */
+h1 {
+  float: center;
+  display: block;
+  background-color: #33d1ff;
+  color: #f5f5f5;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px; 
+  height:100px;
+}
+
+/* Style the text area and submit box */
+
+textarea {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align:center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Movie Genre Classification and Topic Modeling</h1>
+<p>Navigate to classification model or topic model:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Classification')" id="defaultOpen">Genre Classification</button>
+  <button class="tablinks" onclick="openTab(event, 'Topic Model')">Topic Model Summary</button>
+</div>
+
+<div id="Classification" class="tabcontent">
+  <h3>Genre Classification</h3>
+  <form action="/" method="POST">
+ <textarea name="plot_text" placeholder="Type your plot here. . ." rows="15" cols="15">   	</textarea>
+    <input type="submit" value="Enter">
+  </form>
+
+ <br>
+ <br>
+{% autoescape false %}
+  {{ prediction_text }}  
+{% endautoescape %}
+ 
+ 
+</div>
+
+<div id="Topic Model" class="tabcontent">
+  <h3>Topic Model Summary</h3>
+  {% include 'topic_model.html' %}
+</div>
+
+
+<script>
+function openTab(evt, modelType) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(modelType).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
