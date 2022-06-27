@@ -9,6 +9,10 @@ Build a machine learning based application that can classify the genre of any mo
 
 Data source comes from pulling the data from OMDB's API. The estimate size of the data set may be close to 5,000 movie descriptions or less. The total number of variables is 15 for now from the raw data set. This includes the movie title, genre, IMDB rating, and the movie plot summary. However, upon data preparation and cleaning, the number of dimensionality may increase exponentially due to TF-IDF transformations.
 
+# Application 
+
+Live demo of the application can be found here: https://movie-plot-classification.herokuapp.com/ 
+
 Project Organization
 ------------
 
