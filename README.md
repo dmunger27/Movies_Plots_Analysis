@@ -3,8 +3,8 @@ Movies Reviews and Ratings Analysis
 
 # Collaborators 
 
-- Jimmy Nguyen
-- Dallin Munger
+- [Jimmy Nguyen](https://github.com/jimmy-nguyen-data-science)
+- [Dallin Munger](https://github.com/dmunger27)
 - Tyler Wolff
 
 # Final Project Objective
